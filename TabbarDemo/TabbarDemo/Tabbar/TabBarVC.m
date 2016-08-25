@@ -21,12 +21,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    HomeVC *home = [[HomeVC alloc]init];
-    home.tabBarItem.title = @"home";
-    PageOneVC *pageOneVC = [[PageOneVC alloc]init];
-    pageOneVC.tabBarItem.title = @"PageOneVC";
-    PageTwoVC *pageTwoVC = [[PageTwoVC alloc]init];
-    pageTwoVC.tabBarItem.title = @"PageTwoVC";
+    HomeVC *home                  = [[HomeVC alloc]init];
+    home.tabBarItem.title         = @"home";
+    home.tabBarItem.image         = [[UIImage imageNamed:@"456"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    home.tabBarItem.selectedImage = [[UIImage imageNamed:@"789"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    PageOneVC *pageOneVC               = [[PageOneVC alloc]init];
+    pageOneVC.tabBarItem.title         = @"PageOneVC";
+    pageOneVC.tabBarItem.image         = [[UIImage imageNamed:@"456"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    pageOneVC.tabBarItem.selectedImage = [[UIImage imageNamed:@"789"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    PageTwoVC *pageTwoVC               = [[PageTwoVC alloc]init];
+    pageTwoVC.tabBarItem.title         = @"PageTwoVC";
+    pageTwoVC.tabBarItem.image         = [[UIImage imageNamed:@"456"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    pageTwoVC.tabBarItem.selectedImage = [[UIImage imageNamed:@"789"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:102.0/255 green:102.0/255 blue:102.0/255 alpha:1.0],NSForegroundColorAttributeName, [UIFont systemFontOfSize:10.0],NSFontAttributeName,nil] forState:UIControlStateNormal];
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:255.0/255 green:73.0/255 blue:87.0/255 alpha:1.0],NSForegroundColorAttributeName, [UIFont systemFontOfSize:10.0],NSFontAttributeName,nil] forState:UIControlStateSelected];
+    
     
     self.viewControllers = @[home,pageOneVC,pageTwoVC];
 }
