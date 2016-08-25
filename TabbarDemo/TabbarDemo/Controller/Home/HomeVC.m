@@ -20,8 +20,6 @@
     
     self.title = @"首页";
     self.view.backgroundColor = [UIColor redColor];
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {

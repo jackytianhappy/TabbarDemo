@@ -22,8 +22,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     HomeVC *home = [[HomeVC alloc]init];
+    home.tabBarItem.title = @"home";
     PageOneVC *pageOneVC = [[PageOneVC alloc]init];
+    pageOneVC.tabBarItem.title = @"PageOneVC";
     PageTwoVC *pageTwoVC = [[PageTwoVC alloc]init];
+    pageTwoVC.tabBarItem.title = @"PageTwoVC";
     
     self.viewControllers = @[home,pageOneVC,pageTwoVC];
 }
